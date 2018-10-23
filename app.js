@@ -65,3 +65,14 @@ const chart = new ApexCharts(document.querySelector("#chart"), options);
 
 // Render Chart
 chart.render();
+
+//button
+document.querySelector("button").addEventListener("click", () =>
+  chart.updateOptions({
+    plotOptions: {
+      bar: {
+        horizontal: true
+      }
+    }
+  })
+);
