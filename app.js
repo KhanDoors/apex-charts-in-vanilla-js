@@ -61,18 +61,28 @@ const options = {
 };
 
 //Init Chart
-const chart = new ApexCharts(document.querySelector("#chart"), options);
+const chart = new ApexCharts(document.querySelector(".chart1"), options);
+const chart1 = new ApexCharts(document.querySelector(".chart2"), options);
+const chart2 = new ApexCharts(document.querySelector(".chart3"), options);
+const chart3 = new ApexCharts(document.querySelector(".chart4"), options);
+const chart4 = new ApexCharts(document.querySelector(".chart5"), options);
+const chart5 = new ApexCharts(document.querySelector(".chart6"), options);
 
 // Render Chart
 chart.render();
+chart1.render();
+chart2.render();
+chart3.render();
+chart4.render();
+chart5.render();
 
 //button
-document.querySelector("button").addEventListener("click", () =>
-  chart.updateOptions({
-    plotOptions: {
-      bar: {
-        horizontal: true
-      }
-    }
-  })
-);
+// document.querySelector("button").addEventListener("click", () =>
+//   chart.updateOptions({
+//     plotOptions: {
+//       bar: {
+//         horizontal: true
+//       }
+//     }
+//   })
+// );

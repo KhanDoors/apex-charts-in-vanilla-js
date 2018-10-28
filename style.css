@@ -1,11 +1,73 @@
+html {
+  box-sizing: border-box;
+  font-family: serif;
+  font-weight: 900;
+  font-size: 10px;
+  color: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  background: rgb(65, 62, 62);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgb(184, 77, 77) 56%,
+    rgb(85, 15, 15) 100%
+  );
+  background-size: 340px, auto;
+  font-size: 2rem;
+  /* display: flex; */
+  flex: 1;
+  min-height: calc(100vh - 100px);
+  align-items: center;
+  margin: 50px;
+  background-position: fixed;
+}
+
+.chart {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-size: 35px;
 }
 
 .container {
-  margin: 70px auto;
-  overflow: hidden;
-  width: 80%;
-  text-align: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 50px 50px; */
+  grid-template-areas:
+    "chart1 chart2 chart3"
+    "chart4 chart5 chart6";
+}
+
+.chart1 {
+  grid-area: chart1;
+}
+
+.chart2 {
+  grid-area: chart2;
+}
+
+.chart3 {
+  grid-area: chart3;
+}
+
+.chart4 {
+  grid-area: chart4;
+}
+
+.chart5 {
+  grid-area: chart5;
+}
+
+.chart6 {
+  grid-area: chart6;
 }
